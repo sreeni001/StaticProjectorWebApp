@@ -1,0 +1,35 @@
+.login-logo{
+    height:100px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom:20px;
+}
+.Container{
+    height: 100vh;
+    flex-direction: column;
+      margin: 0;
+      padding:0;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    
+    
+}
+input{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height:40px;
+    width:85%;
+    margin-left:20px;
+    font-size:20px;
+    border-radius:15px;
+    box-shadow: none;
+    background-color:pink;
+    border-color:pink;
+    outline:none;
+    border:none;
+}
