@@ -1,13 +1,14 @@
 .login-logo{
-    height:100px;
-    width:100px;
+    height:150px;
+    width:150px;
     display: flex;
     justify-content: center;
     align-items:center;
     margin-bottom:20px;
+    position:relative;
 }
 .Container{
-    height: 100vh;
+    height: 95vh;
     flex-direction: column;
       margin: 0;
       padding:0;
@@ -20,6 +21,7 @@
 input{
     text-align:center;
     display: flex;
+    color:Black;
     justify-content: center;
     align-items:center;
     height:40px;
@@ -32,4 +34,9 @@ input{
     border-color:pink;
     outline:none;
     border:none;
+}
+.LoginButton{
+    height:100px;
+    position: relative;
+    left:32%;
 }
