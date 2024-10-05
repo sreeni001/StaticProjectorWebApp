@@ -2,7 +2,9 @@ import {React,useState} from 'react';
 import './cssfiles/login.css'
 import LoginButton from './assets/LoginButton.png'
 import logo from './assets/login.png';
+import {useNavigate} from 'react-router-dom';
 function Login(){
+        const navigate = useNavigate();
         //const [userName,getUsername] = useState('');
         const Validation=async ()=>{
             try{
@@ -10,13 +12,16 @@ function Login(){
             const result = await fetch("http://localhost:5000/submit",{
                 method: 'POST', 
                 headers: {
-                  'Content-Type': 'application/json', // Specify content type
+                  'Content-Type': 'application/json', 
                 },
                 body: JSON.stringify({usrname: document.getElementsByClassName('usrname')[0].value ,pass: document.getElementsByClassName('pass')[0].value}),
             });
             if(!result.ok) throw new Error('problem in fetching');
             const data = await result.json();
-            console.log(data);}
+            navigate('/IndexPage', {state : data});
+            /* To send data to the next page using Usenavigation along with state that carrries the values to the next page     */
+
+            }
             catch(err){
                 console.error('Error fetching data:', err);
             }

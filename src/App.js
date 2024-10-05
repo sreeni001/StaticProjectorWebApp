@@ -1,11 +1,21 @@
 import Login from './components/login.js';
 import IndexPage from './components/IndexPage.js'
 import './App.css'
+import LoginCredential from './components/LoginCredential.js';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <>
-       <Login/> 
-       {/* <IndexPage/> */}
+       <Router>
+          <Routes>
+          <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/LoginCredential" element={<LoginCredential />} />
+        <Route path="/IndexPage" element={<IndexPage />} />
+          </Routes>
+       </Router>
+       
     </>
   );
 }
