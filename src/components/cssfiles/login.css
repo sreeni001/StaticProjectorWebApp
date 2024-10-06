@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 .login-logo{
     height:150px;
     width:150px;
@@ -25,8 +26,8 @@ input{
     justify-content: center;
     align-items:center;
     height:40px;
-    width:85%;
-    margin-left:20px;
+    width:100%;
+    
     font-size:20px;
     border-radius:15px;
     box-shadow: none;
@@ -34,9 +35,13 @@ input{
     border-color:pink;
     outline:none;
     border:none;
+    font-family: "Jockey One", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 .LoginButton{
-    height:100px;
+    height:40px;
     position: relative;
-    left:32%;
+    margin-top:10px;
+    left:41%;
 }

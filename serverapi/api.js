@@ -10,7 +10,7 @@ const corsOptions = {
 app.post('/submit',cors(corsOptions),(req,res)=>{
     const {usrname,pass} = req.body;
     if(usrname=='deansoc@sastra.edu' && pass=='Sriram'){
-        res.status(200).json({Name:'Mr.Pradhhyumna',role:'Dean IoT'});
+        res.status(200).json({Name:'DR.SHANKAR SRIRAM',role:'Dean SoC'});
     }
     else{
         res.status(400).json({message:'Error proper Username and Password required'});

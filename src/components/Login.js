@@ -1,6 +1,6 @@
 import {React,useState} from 'react';
 import './cssfiles/login.css'
-import LoginButton from './assets/LoginButton.png'
+/*import LoginButton from './assets/LoginButton.png'*/
 import logo from './assets/login.png';
 import {useNavigate} from 'react-router-dom';
 function Login(){
@@ -36,7 +36,7 @@ function Login(){
                     <br/>
                     
                     <input type='password' name='pass' className='pass' placeholder='Password'/>
-                    <img src={LoginButton} onClick={Validation} className='LoginButton'/>
+                    <img src='https://icon-library.com/images/login-icon/login-icon-29.jpg' onClick={Validation} className='LoginButton'/>
                 </div>
                 </div>
             </>
