@@ -28,7 +28,7 @@
     margin:15px;
     z-index:1;
 }
-.Clasrooms{
+.Classrooms{
     grid-row: 2.5/3;
     grid-column:1/5;
     background-color:#D6CAB4;
@@ -125,11 +125,95 @@
 }
 .classNames{
     align-self: flex-start;
+    margin-left:10px;
 }
 .Time{
-    align-self: flex-end;
+    float: right;
+    margin-right:10px;
+}
+.Time img{
+   padding-right:10px;
+   position: relative;
+   top:5px;
 }
 .AccessedClassList::-webkit-scrollbar {
     width: 0;              
     background: transparent; 
+  }
+
+
+  /*Classroom Downbar*/
+  .bookimg{
+    height:40px;
+    width:40px;
+    background-color:#FF6E30;
+    padding:8px;
+    border-radius:15px;
+    position: relative;
+    top:-30px;
+  }
+  .Classrooms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .classContainer{
+    position: relative;
+    left:-90px;
+    display: flex;
+    flex-direction:row;
+  }
+
+  .Classes{
+    margin:30px;
+    background-color:white;
+    padding:0px 70px 10px 20px;
+    padding-top:0px;
+    border-radius:20px;
+    position: relative;
+ 
+  }
+
+  .Type, .No{
+    font-family: "Jockey One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .Type{
+    font-size:1.3em;
+  }
+  .No{
+    position: relative;
+   
+    font-size:2.3em;
+  }
+  .Sampletext{
+    font-family: "Jockey One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+
+    padding:0px;
+    margin:0px;
+    font-size:1.7em;
+    transform: rotate(-90deg);
+  }
+  .SampleQuote{
+    font-family: "inder", sans-serif;
+    font-weight: 400;
+    left:-50px;
+    font-style: normal;
+    position: relative;
+    text-align: center;
+   
+    margin:0px;
+    font-size:1.2em;
+    padding:0px;
+    transform: rotate(-90deg);
+  }
+  .classContainer::-webkit-scrollbar {
+        width: 0;              
+        background: transparent; 
+      
   }

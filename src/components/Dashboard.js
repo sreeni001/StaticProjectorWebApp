@@ -16,7 +16,7 @@ function Dashboard(props){
     /* Dashboard List (will be used to get Data from Db and set)*/
     const [Date,selectDate] = useState(['Yesterday','Today'])
     const [StaffList,selectStaff]= useState(['Prof.Ezhilarasi','Prof.Rajilal']);
-    const [ClassAccessed,getClassAccessed] = useState([{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'}])
+    const [ClassAccessed,getClassAccessed] = useState([{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'},{Class:'LTC214',Time:'11 am'}])
 
     /*selectedDate and Staff List used for showing the selected data */
     const [selectedStaff,getSelectedStaff] = useState('');
@@ -28,7 +28,8 @@ function Dashboard(props){
         getSelectedDay(e.target.value);
     }    
 
-
+    /*Classroom*/
+    const [classRoom,AvailableClassRoom] = useState([{Type:"LTC",No:"214"},{Type:"LTC",No:"214"},{Type:"LTC",No:"214"},{Type:"LTC",No:"214"},{Type:"LTC",No:"214"},{Type:"LTC",No:"214"},{Type:"LTC",No:"214"},])
 
        return(
      <>
@@ -67,16 +68,44 @@ function Dashboard(props){
                                 }}>
                                 {ClassAccessed.map((classData) => (
                                 <div className="ListofClass" key={classData.id}>
-                                <span className="classNames">{classData.Class}</span>
-                                <span className="Time">{classData.Time}</span>
+                                <span className="classNames" key={classData.Class}>{classData.Class}</span>
+                               
+                                <span className="Time">
+                                    <img src='https://cdn2.iconfinder.com/data/icons/inverticons-stroke-vol-4/32/connection_signal_full_internet_phone-512.png' height='15px' width='15px'/>
+                                    <img src='https://www.pngarts.com/files/4/Black-Wifi-Logo-Transparent-Images-279x279.png' height='15px' width='15px'/>
+                                    {classData.Time}</span>
                                 </div>
                                  ))}
                                 </div>
 
                         </div>
-
-                <div className='Clasrooms'>
-
+                {/* Classroom Data */}
+                <div className='Classrooms' style={{
+                                 maxHeight: '400px', 
+                               // Set the desired max height to control the vertical scroll area
+                                 overflowY: 'hidden',  // Enable vertical scrolling
+                                 overflowX: 'auto', // Hide horizontal scrollbar
+                                }} >
+                        <p className='Sampletext'>Classrooms</p>
+                        <p className='SampleQuote'>“Learning is not limited to the classroom.”</p>
+                        <div className='classContainer' style={{
+                                 maxHeight: '400px',
+                                 maxWidth:'100%', 
+                               // Set the desired max height to control the vertical scroll area
+                               
+                                 overflowY: 'hidden',  // Disable vertical scrolling
+                                 overflowX: 'auto',    // Enable horizontal scrolling
+                                 display: 'flex',
+                                 flexDirection: 'row',
+                                }}>
+                        {classRoom.map((classes) => (
+                            <div className="Classes">
+                                <img src='https://www.svgrepo.com/download/109705/open-book.svg' className="bookimg"/>
+                                <div className='Type' key={classes.Type}>{classes.Type}</div>
+                                <div className='No'key={classes.No}>{classes.No}</div>
+                            </div>
+                        ))}
+                        </div>
                 </div>
 
       </div> 
