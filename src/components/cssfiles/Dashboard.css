@@ -213,7 +213,7 @@
     transform: rotate(-90deg);
   }
   .classContainer::-webkit-scrollbar {
-        width: 0;              
+        width:0;              
         background: transparent; 
       
   }

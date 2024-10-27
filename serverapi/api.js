@@ -17,6 +17,13 @@ app.post('/submit',cors(corsOptions),(req,res)=>{
     }
 })
 
+/* Api for taking care of connection to db and realtime connection */
+
+
+
+
+
+
 app.listen(5000,()=>{
     console.log("Server Started Listening..");
 })
